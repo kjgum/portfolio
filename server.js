@@ -8,8 +8,8 @@ var http = require('http');
 var fs = require('fs');
 var path = require('path');
 
-var nodemailer = require('nodemailer');
-var sgTransport = require('nodemailer-sendgrid-transport');
+// var nodemailer = require('nodemailer');
+// var sgTransport = require('nodemailer-sendgrid-transport');
 var app = express();
 
 // Sets up the Express App
@@ -40,7 +40,7 @@ app.get('/cv', function(req, res) {
     res.sendFile(path.join(__dirname, 'cv.html'));
 })
 app.get('/resume', function(req, res) {
-    res.sendFile(path.join(__dirname, ''));
+    res.sendFile(path.join(__dirname, 'resume.html'));
 })
 
 app.listen(PORT, function() {
